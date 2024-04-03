@@ -22,7 +22,8 @@ Middleware:
 --> It is the suggested way to extend the redux custom functionality.
 --> It basically provides the third-party extension points between dispatching an action and the moment it reaches the reducer.
 --> It is mainly used for logging, crash reporting, performing async tasks, etc.
---> We use redux-logger
+--> We use redux-logger for logging in our application.
+--> We pass middleware to the createstore method along with reducer an also pass logger as argument to the middleware.
 
 Note:
 --> Action creator is a function that retuns an action.
@@ -30,3 +31,4 @@ Note:
 --> In order to make our application more scalable we integrate multiple reducers for our store with different initial states and then combine them together to pass to the store(as store can receive one reducer as agrument).
 --> Although we can have multiple properties in a single object but that makes our state and also reducer function more complex.(We can also do this by this way).
 --> When we dispatch an action, both the reducers will receive that action, but the differnce is one of them acts on that action while the other ignores it.
+--> Actions(dispatch method call) are by default synchronous in nature.
