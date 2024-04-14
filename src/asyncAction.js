@@ -1,7 +1,7 @@
 const redux = require("redux");
 const createStore = redux.createStore;
 const applyMiddleware = redux.applyMiddleware;
-const thunkMiddleware = require("redux-thunk");
+const thunkMiddleware = require("redux-thunk").default;
 const axios = require("axios");
 
 const initialState = {
@@ -44,14 +44,14 @@ const reducer = (state = initialState, action) => {
       };
     case FETCH_USERS_SUCCESS:
       return {
-        ...state,
-        users: action.payload,
         loading: false,
+        users: action.payload,
+        error: "",
       };
     case FETCH_USERS_FAILURE:
       return {
-        ...state,
         loading: false,
+        users: [],
         error: action.payload,
       };
   }
