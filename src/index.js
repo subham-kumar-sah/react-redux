@@ -6,8 +6,8 @@ const reduxLogger = require("redux-logger");
 
 const createStore = redux.createStore;
 const combineReducer = redux.combineReducers;
-const logger = reduxLogger.createLogger();
 const applyMiddleware = redux.applyMiddleware;
+const logger = reduxLogger.createLogger();
 
 // const initialState = {
 //   noOfCakes: 100,

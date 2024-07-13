@@ -23,8 +23,8 @@ Middleware:
 --> It basically provides the third-party extension points between dispatching an action and the moment it reaches the reducer.
 --> It is mainly used for logging, crash reporting, performing async tasks, etc.
 --> We use redux-logger for logging in our application.
---> We pass middleware to the createstore method along with reducer an also pass logger as argument to the middleware.
---> Redux-thunk is used for making our code asynchronous by defining async action creators i.e return a function instead of an action object.
+--> We pass middleware to the createstore method along with reducer an also pass logger as argument to the middleware which is the middleware itself.
+--> Redux-thunk is used for making our code asynchronous by defining async action creators i.e return a function instead of an action object. It can also dispatch regular actions which will be handled by the reducer.
 --> The inner function which it returns gets dispatch method as parameter.
 
 Note:
